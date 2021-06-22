@@ -48,6 +48,13 @@ android {
     }
 
     signingConfigs {
+        debug {
+            storeFile rootProject.file("app/debug.keystore")
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
+        }
+        
         release {
             storeFile rootProject.file("app/android.keystore")
             storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
@@ -61,6 +68,8 @@ android {
         }
     }
 }
+
+
   
 
 
