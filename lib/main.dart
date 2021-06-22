@@ -13,8 +13,8 @@ import 'app.dart';
 void initAppCenter() async {
   final ios = defaultTargetPlatform == TargetPlatform.iOS;
   var appSecret = ios ? "iOSGuid" : "AndroidGuid";
-  await AppCenter.start(
-      appSecret, [AppCenterAnalytics.id, AppCenterCrashes.id]);
+  await AppCenter.start(appSecret, "cbb9b401-b5c5-4646-988c-8d8afaeded18",
+                  Analytics.class, Crashes.class);
 }
 
 @override
