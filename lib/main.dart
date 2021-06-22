@@ -13,8 +13,8 @@ import 'app.dart';
 void initAppCenter() async {
   final ios = defaultTargetPlatform == TargetPlatform.iOS;
   var appSecret = ios ? "iOSGuid" : "AndroidGuid";
-  await AppCenter.start(appSecret, "cbb9b401-b5c5-4646-988c-8d8afaeded18",
-                  Analytics.class, Crashes.class);
+  await AppCenter.start(appSecret, 
+                 [AppCenterAnalytics.id, AppCenterCrashes.id]);
 }
 
 @override
@@ -23,14 +23,6 @@ void initState() {
 }
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await AppCenter.startAsync(
-  //   appSecretAndroid: '49361c2e-b788-4bc2-a33d-838b04b3e06b',
-  //   appSecretIOS: '2da3d93f-6b3f-48f9-920f-2d63ae3cd25a',
-  //   enableDistribute: true,
-  // );
-  // await AppCenter.configureDistributeDebugAsync(enabled: false);
-
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
