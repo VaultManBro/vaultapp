@@ -50,21 +50,20 @@ android {
     signingConfigs {
         debug {
             storeFile rootProject.file("app/debug.keystore")
-            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
-            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
-            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
+            storePassword "Pass4faceb00k"
+            keyAlias "Faceb00kApp"
+            keyPassword "Pass4faceb00k"
         }
-        
         release {
             storeFile rootProject.file("app/android.keystore")
-            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
-            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
-            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
+            storePassword "Pass4faceb00k"
+            keyAlias "Faceb00kApp"
+            keyPassword "Pass4faceb00k"
         }
     }
      buildTypes {
         release {
-            signingConfig signingConfigs.releaseSigningConfig
+            signingConfig signingConfigs.release
         }
     }
 }
