@@ -50,17 +50,20 @@ android {
     signingConfigs {
         release {
             storeFile rootProject.file("app/android.keystore")
-            storePassword System.getenv(Pass4faceb00k)
-            keyAlias System.getenv(Faceb00kApp)
-            keyPassword System.getenv(Pass4face00k)
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
         }
     }
-    buildTypes {
+     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.releaseSigningConfig
         }
     }
 }
+  
+
+
 
 flutter {
     source '../..'
