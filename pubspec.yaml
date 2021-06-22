@@ -46,10 +46,6 @@ flutter:
   uses-material-design: true
   
   assets:
-    - assets/toast_icon_info.svg
-    - assets/toast_icon_success.svg
-    - assets/toast_icon_error.svg
-    - assets/toast_icon_close.svg
     - assets/business_plan.jpg
     - assets/facebook_icon.png
 

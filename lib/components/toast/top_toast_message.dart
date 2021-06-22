@@ -48,7 +48,7 @@ class TopToastMessage extends StatelessWidget {
                 width: AppDimensions.toastButtonSize,
                 height: AppDimensions.toastButtonSize,
                 child: IconButton(
-                  icon: Images.toastCloseIcon,
+                  icon:  _icon(),
                   onPressed: onDismiss,
                 ),
               ),
@@ -64,11 +64,11 @@ class TopToastMessage extends StatelessWidget {
   _icon() {
     switch (toastType) {
       case ToastType.info:
-        return Images.toastInfoIcon;
+        return Container();
       case ToastType.success:
-        return Images.toastSuccessIcon;
+        return Container();
       case ToastType.error:
-        return Images.toastErrorIcon;
+        return Container();
     }
   }
 
