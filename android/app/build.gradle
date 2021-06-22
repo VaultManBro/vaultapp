@@ -48,17 +48,11 @@ android {
     }
 
     signingConfigs {
-        debug {
-            storeFile rootProject.file("app/debug.keystore")
-            storePassword "Pass4faceb00k"
-            keyAlias "Faceb00kApp"
-            keyPassword "Pass4faceb00k"
-        }
         release {
-            storeFile rootProject.file("app/android.keystore")
-            storePassword "Pass4faceb00k"
-            keyAlias "Faceb00kApp"
-            keyPassword "Pass4faceb00k"
+            storeFile file('../android.keystore')
+            storePassword 'Pass4faceb00k'
+            keyAlias 'Faceb00kApp'
+            keyPassword 'Pass4faceb00k'
         }
     }
      buildTypes {
